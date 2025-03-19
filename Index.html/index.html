@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal 3D con Target Tracker</title>
+
+    <!-- A-Frame y AR.js -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+    <a-scene embedded arjs>
+        <!-- Definir el marcador -->
+        <a-marker type="pattern" url="marker.patt">
+            <!-- Cargar el modelo desde GitHub -->
+            <a-entity 
+                gltf-model="https://github.com/Ch3s73r/MCI/raw/refs/heads/main/Carpincho.glb"
+                position="0 0 0"
+                scale="0.5 0.5 0.5"
+                rotation="0 180 0">
+            </a-entity>
+        </a-marker>
+
+        <!-- Cámara AR -->
+        <a-entity camera></a-entity>
+    </a-scene>
+
+</body>
+</html>
+
