@@ -11,8 +11,10 @@
     <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
         <!-- Definir el marcador con la URL del archivo .patt -->
         <a-marker preset="custom" type="pattern" url="https://raw.githubusercontent.com/Ch3s73r/MCI/main/carpinchomark.patt">
-            <!-- Ajustar la escala y posición del modelo 3D -->
-            <a-entity gltf-model="https://raw.githubusercontent.com/Ch3s73r/MCI/main/carpincho.glb" scale="0.5 0.5 0.5" position="0 0 0" rotation="0 180 0"></a-entity>
+            <!-- Modelo 3D con animación en loop y escala aumentada -->
+            <a-entity gltf-model="https://raw.githubusercontent.com/Ch3s73r/MCI/main/carpincho.glb" 
+                      scale="1.5 1.5 1.5" position="0 0 0" rotation="0 180 0" 
+                      animation-mixer="loop: repeat;"></a-entity>
         </a-marker>
         <!-- Configuración de la cámara -->
         <a-entity camera fov="80"></a-entity>
