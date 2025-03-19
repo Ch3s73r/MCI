@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Model Viewer</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
+      <!-- Definir el marcador AR -->
       <a-marker type="pattern" url="marker.patt">
-        <a-entity
-          gltf-model="https://raw.githubusercontent.com/Ch3s73r/MCI/raw/refs/heads/main/Carpincho.glb"
-          position="0 0 0"
-          scale="0.5 0.5 0.5"
-          rotation="0 180 0">
+        <!-- Cargar el modelo 3D del repositorio de GitHub -->
+        <a-entity 
+          gltf-model="https://raw.githubusercontent.com/Ch3s73r/MCI/main/Carpincho.glb" 
+          scale="0.5 0.5 0.5" 
+          position="0 0 0">
         </a-entity>
       </a-marker>
+
+      <!-- Cámara -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
-
